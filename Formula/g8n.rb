@@ -8,7 +8,7 @@ class G8n < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(output: bin/"g8n", ldflags: "-s -w -X main.ver=#{version}")
+    system "go", "build", *std_go_args(output: bin / "g8n"), "./cmd/g8n"
   end
 
   test do
